@@ -12,9 +12,8 @@
 
     var map;
     function initMap() {
-
       var geocoder = new google.maps.Geocoder();
-      var address = "San Diego";
+      var address = "Portland";
       geocoder.geocode({'address': address}, function (results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
           var latLng = new google.maps.LatLng(results[0].geometry.location.lat(), 
@@ -38,12 +37,33 @@
                 }
 
                 alert(postal_code);
+
+                var marker = new google.maps.Marker({
+                  position: event.latLng,
+                  map: map,
+                  title: "Hello World!"
+                });
               }
             });
           });
 
         }
       });
+    }
+
+    function covert_to_crime_by_zipcode(data) {
+      var crime_by_zipcode = {};
+      for (var i = 0; i < data.length; ++i) {
+        var address = data[i][4];
+        var zipcode = address.slice(address.length - 5);
+        if ((zipcode in crime_by_zipcode) == false) 
+          crime_by_zipcode[zipcode] = {};
+        crime_type = data[i][3];
+        if ((crime_type in crime_by_zipcode[zipcode]) == false)
+          crime_by_zipcode[zipcode][crime_type] = 0;
+        crime_by_zipcode[zipcode][crime_type]++;
+      }
+      return crime_by_zipcode;
     }
 
     </script>
