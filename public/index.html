@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <html>
   <head>
     <style type="text/css">
@@ -10,39 +12,32 @@
   <body>
     <div id="map"></div>
     <script type="text/javascript">
-
     var crime_by_zipcode = undefined;
     var map;
     var marker;
     var infowindow;
     function initMap() {
-
       var geocoder = new google.maps.Geocoder();
       var address = "Portland";
       geocoder.geocode({'address': address}, function (results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
           var latLng = new google.maps.LatLng(results[0].geometry.location.lat(), 
             results[0].geometry.location.lng());
-
           map = new google.maps.Map(document.getElementById('map'), {
             center: latLng,
             zoom: 12
           });
-
           map.addListener('click', function (event) {
             // alert(event.latLng);
             geocoder.geocode({"location": event.latLng}, function (results, status) {
               if (status == google.maps.GeocoderStatus.OK) {
                 var address_components = results[0].address_components;
-
                 var postal_code = undefined;
                 for (var i = 0; i < address_components.length; ++i) {
                   if (address_components[i]["types"] == "postal_code")
                     postal_code = address_components[i]["long_name"];
                 }
-
                 get_crime_data(postal_code, event.latLng);
-
               }
             });
           });
@@ -55,25 +50,68 @@
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
             if (xhttp.readyState == 4 && xhttp.status == 200) {
-                var content = xhttp.responseText;
+                var crime_by_zipcode = JSON.parse(xhttp.responseText);
                 
                 if (marker != undefined)
                     marker.setMap(null);
-
                 marker = new google.maps.Marker({
                     position: position,
                     map: map
                 });
-
                 infowindow = new google.maps.InfoWindow({
-                    content: JSON.stringify(JSON.parse(content))
+
+                    content: '<div id="container" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>'  
                 });
 
                 marker.addListener('click', function() {
-                    infowindow.open(map, marker)
+                    var crime_type = ["Forgery", "Rape", "Larceny", "Homicide", "Liquor Laws", "Curfew", "Runaway", "Fraud", "Arson", "Drugs", "Aggravated Assault", "Sex Offenses", "Gambling", "Disorderly Conduct", "Assault, Simple", "Vandalism", "DUII", "Kidnap"
+                , "Trespass", "Motor Vehicle Theft", "Stolen Property", "Offenses Against Family", "Embezzlement", "Burglary", "Weapons"
+                , "Prostitution", "Robbery"];
+                    var crime_type_number = {};
+                    for (var i = 0; i < crime_type.length; ++ i) {
+                      crime_type_number[crime_type[i]] = 0;
+                    }
+                    for (var key in crime_by_zipcode) {
+                      crime_type_number[key] = crime_by_zipcode[key];
+                    }
+                    var data_to_use = [];
+                    for (var key in crime_type_number) {
+                      data_to_use.push(crime_type_number[key]);
+                    }
+                    infowindow.open(map, marker);
+                    $('#container').highcharts({
+                      chart: {
+                          type: 'bar'
+                      },
+                      title: {
+                          text: 'Criminal Number By Types'
+                      },
+                      xAxis: {
+                          categories: crime_type,
+                          title: {
+                              text: null
+                          }
+                      },
+                      
+                      plotOptions: {
+                          bar: {
+                              dataLabels: {
+                                  enabled: true
+                              }
+                          }
+                      },
+                      
+                      credits: {
+                          enabled: false
+                      },
+                      series: [{
+                          name: 'Records',
+                          data: data_to_use
+                      }]
+                    });
                 });
             }
-        };
+        }
         xhttp.open("GET", "http://131.179.46.129:3000/query?zipcode=" + zipcode, true);
         xhttp.send();
     }
