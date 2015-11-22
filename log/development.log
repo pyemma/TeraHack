@@ -676,3 +676,157 @@ Cannot render console from 131.179.46.129! Allowed networks: 127.0.0.1, ::1, 127
 Processing by WebservicesController#query as */*
   Parameters: {"zipcode"=>"97212"}
 Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/query?zipcode=97203" for 131.179.46.129 at 2015-11-21 18:28:59 -0800
+Cannot render console from 131.179.46.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WebservicesController#query as */*
+  Parameters: {"zipcode"=>"97203"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/query?zipcode=97218" for 131.179.46.129 at 2015-11-21 18:29:06 -0800
+Cannot render console from 131.179.46.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WebservicesController#query as */*
+  Parameters: {"zipcode"=>"97218"}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/query?zipcode=97215" for 131.179.46.129 at 2015-11-21 18:29:11 -0800
+Cannot render console from 131.179.46.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WebservicesController#query as */*
+  Parameters: {"zipcode"=>"97215"}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/query?zipcode=97201" for 131.179.46.129 at 2015-11-21 18:29:16 -0800
+Cannot render console from 131.179.46.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WebservicesController#query as */*
+  Parameters: {"zipcode"=>"97201"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/query?zipcode=97239" for 131.179.46.129 at 2015-11-21 18:29:17 -0800
+Cannot render console from 131.179.46.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WebservicesController#query as */*
+  Parameters: {"zipcode"=>"97239"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/query?zipcode=97209" for 166.170.48.11 at 2015-11-21 18:33:20 -0800
+Cannot render console from 166.170.48.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WebservicesController#query as */*
+  Parameters: {"zipcode"=>"97209"}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/query?zipcode=97214" for 131.179.49.44 at 2015-11-21 18:33:45 -0800
+Cannot render console from 131.179.49.44! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WebservicesController#query as */*
+  Parameters: {"zipcode"=>"97214"}
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/query?zipcode=97214" for 131.179.49.44 at 2015-11-21 18:33:48 -0800
+Cannot render console from 131.179.49.44! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WebservicesController#query as */*
+  Parameters: {"zipcode"=>"97214"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/query?zipcode=97214" for 131.179.49.44 at 2015-11-21 18:33:49 -0800
+Cannot render console from 131.179.49.44! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WebservicesController#query as */*
+  Parameters: {"zipcode"=>"97214"}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/query?zipcode=97214" for 131.179.49.44 at 2015-11-21 18:33:50 -0800
+Cannot render console from 131.179.49.44! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WebservicesController#query as */*
+  Parameters: {"zipcode"=>"97214"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/query?zipcode=97213" for 131.179.46.129 at 2015-11-21 18:50:04 -0800
+Cannot render console from 131.179.46.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WebservicesController#query as */*
+  Parameters: {"zipcode"=>"97213"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/query?zipcode=97217" for 131.179.46.129 at 2015-11-21 18:50:15 -0800
+Cannot render console from 131.179.46.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WebservicesController#query as */*
+  Parameters: {"zipcode"=>"97217"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/query?zipcode=97202" for 131.179.46.129 at 2015-11-21 18:57:04 -0800
+Cannot render console from 131.179.46.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WebservicesController#query as */*
+  Parameters: {"zipcode"=>"97202"}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/query?zipcode=97214" for 131.179.46.129 at 2015-11-21 19:20:57 -0800
+Cannot render console from 131.179.46.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WebservicesController#query as */*
+  Parameters: {"zipcode"=>"97214"}
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/query?zipcode=97214" for 131.179.43.211 at 2015-11-21 19:23:01 -0800
+Cannot render console from 131.179.43.211! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WebservicesController#query as */*
+  Parameters: {"zipcode"=>"97214"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/query?zipcode=97229" for 131.179.43.211 at 2015-11-21 19:23:06 -0800
+Cannot render console from 131.179.43.211! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WebservicesController#query as */*
+  Parameters: {"zipcode"=>"97229"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/query?zipcode=97211" for 131.179.43.211 at 2015-11-21 19:23:08 -0800
+Cannot render console from 131.179.43.211! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WebservicesController#query as */*
+  Parameters: {"zipcode"=>"97211"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/query?zipcode=97218" for 131.179.43.211 at 2015-11-21 19:23:16 -0800
+Cannot render console from 131.179.43.211! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WebservicesController#query as */*
+  Parameters: {"zipcode"=>"97218"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/query?zipcode=97202" for 131.179.43.211 at 2015-11-21 19:23:22 -0800
+Cannot render console from 131.179.43.211! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WebservicesController#query as */*
+  Parameters: {"zipcode"=>"97202"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/query?zipcode=97219" for 131.179.43.211 at 2015-11-21 19:23:26 -0800
+Cannot render console from 131.179.43.211! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WebservicesController#query as */*
+  Parameters: {"zipcode"=>"97219"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/query?zipcode=97202" for 131.179.43.211 at 2015-11-21 19:23:31 -0800
+Cannot render console from 131.179.43.211! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WebservicesController#query as */*
+  Parameters: {"zipcode"=>"97202"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/query?zipcode=97212" for 131.179.46.129 at 2015-11-21 19:34:35 -0800
+Cannot render console from 131.179.46.129! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WebservicesController#query as */*
+  Parameters: {"zipcode"=>"97212"}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
